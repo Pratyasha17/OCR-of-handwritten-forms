@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}" crossorigin="anonymous">
+    <link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/select2.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/select2-bootstrap4.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" crossorigin="anonymous">
+    <title>OCR</title>
+  </head>
+  <body>
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 logo">
+                    <a href="#" title="OCR">
+                        <img src="{{ url_for('static', filename='images/ocrlogo.png')}}" width="50"  alt="OCR" />
+                    </a>
+
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="content-area">
+        <form>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="canvas-container" id="maindiv">
+                            <div class="pageNumbers" id="pageLabel">01</div>
+                            <canvas id="mainCanvas"></canvas>
+                        </div> 
+                        <div class="spacer"></div>
+                       <div class="form">
+                           <form>
+                               <div class="row">
+                                   <div class="col-md-5">
+                                     <input type="text" id="pathField" class="form-control" name="" placeholder="Enter Path">
+                                   </div>
+                                   <div class="col-md-7">
+                                     <button class="btn btn-default preview-button addFiles" id="fileUpload">UPLOAD
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                   </div>
+                               </div>
+                               <div class="spacer"></div>
+                               <div class="row">
+                                   <div class="col-md-5">
+                                     <input type="text" id="savePathField" class="form-control" name="" placeholder="Enter Save Folder">
+                                   </div>
+                                <div class="col-md-7">
+                                    <button type="button" id="submitButton" class="submit-btn form-control" value="SUBMIT">
+                                        SUBMIT
+                                    </button>
+                                  </div>
+                               </div>
+                           </form>
+                       </div>
+                    </div>
+                    <div class="col-md-4 preview-container">
+                        <textarea id="ocrResult" class="preview-text">
+                            
+                        </textarea>
+                        <button class="btn btn-default preview-button" id="nextPage">NEXT
+                            <i class="fas fa-angle-right"></i>
+                        </button>
+                        <div class="search_categories">
+                            <div class="select">
+                                <select class='dropdown-toggle' id="processingList">
+                                    <option  selected>Image Processing</option>
+                                    <option>PDF Processing</option>
+
+                                </select>
+
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="spacer"></div>
+                                <div class="checkboxes" id="checkBoxDiv"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        &copy; Copyrights 2022,CMR, All Rights Reserved.
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type = 'text/javascript' src="{{ url_for('static', filename='js/cropscript.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

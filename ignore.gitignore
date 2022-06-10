@@ -1,0 +1,7 @@
+.idea/
+__pycache__/
+**/uploads
+**.xlsx
+test.py
+Results/
+test/
