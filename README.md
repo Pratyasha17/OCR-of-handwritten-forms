@@ -1,20 +1,18 @@
 
-# EYOCR
-EYOCR is a tool designed to help teams extract data from documents seamlessly. It is a web application that allows a user to select multiple blocks on a document and extract data from these blocks across all selected documents and consolidate them into Excel(s). 
+# OCR
+OCR is a tool designed to help teams extract data from documents seamlessly. It is a web application that allows a user to select multiple blocks on a document and extract data from these blocks across all selected documents and consolidate them into Excel(s). 
 
-# Features
+## Features
 
-## Re-Use Templates
-
-EYOCR minimizes making the templates for long documents. It allows you to group all pages which have the same template.
+OCR minimizes making the templates for long documents. It allows you to group all pages which have the same template.
 
 ## Automatic extraction from PDF
 
-EYOCR automatically handles the conversion of PDF to images so you don't have to. All you have to do is select the folder with all your documents.
+OCR automatically handles the conversion of PDF to images so you don't have to. All you have to do is select the folder with all your documents.
 
 ## Add your own type of processing
 
-EYOCR aims to provide maximum flexibility to the user because our team understand that all data extraction processes have different requirements. In EYOCR, you can add your custom processing. Processing here refers to how your data is extracted and then consolidated into a format. You can do this in three steps:
+OCR aims to provide maximum flexibility to the user because our team understand that all data extraction processes have different requirements. In OCR, you can add your custom processing. Processing here refers to how your data is extracted and then consolidated into a format. You can do this in three steps:
 
 1. In app.py, add a function which accepts parameters files, path where the results needs to be saved and pageCoordinates(if documents are of type PDF)/blockCoordinates(if the documents are images). The function should handle the data consolidation and saving the data in an Excel or whichever format suits best. _Make sure that the function returns a boolean object indicating if the data was saved successfully. For example: If any exception occurs, you can return a False to indicate there was a problem._
 
